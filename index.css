@@ -1,46 +1,86 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'poppins', sans-serif;
+  font-family: 'Fira Sans', sans-serif;
 }
 
-header {
-  width: 100%;
-  margin-top: 0;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+body {
+  background: rgb(242, 241, 241);
 }
 
-nav {
+header nav {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  border: none;
+  align-items: center;
+  background-color: #fff;
+  padding-left: 80px;
+  padding-right: 80px;
+  height: 57px;
 }
 
-.header-text {
-  padding: 30px;
+.logo {
   font-size: 24px;
-  font-weight: 600;
+  font-weight: bold;
 }
 
-.nav-list {
+header nav ul {
   display: flex;
-  padding-right: 30px;
-  gap: 30px;
+  justify-content: center;
 }
 
-.nav-list li {
+header nav ul li {
+  display: block;
   list-style: none;
+  font-weight: 400;
 }
 
-.nav-list li a {
-  font-size: 24px;
-  font-weight: 400;
+header nav ul li a {
   text-decoration: none;
-  color: #000;
+  padding: 15px 20px;
+  font-size: 20px;
+  color: black;
+}
+
+h1 {
+  font-size: 52px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.record {
+  width: 60%;
+  height: 100%;
+  margin: 10px auto;
+  padding: 24px;
+  background: #fff;
+  border-radius: 5px;
+}
+
+.element {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+  font-size: 16px;
+  padding: 9px;
+  background: rgb(242, 241, 241);
+  border-radius: 7px;
+}
+
+form button {
+  width: 40%;
+  height: 40px;
+  font-size: 16px;
+  font-weight: 400;
+  position: absolute;
+  bottom: -40px;
+  right: 0;
+  color: #fff;
+  background: #1d9207;
+  border: none;
+  border-radius: 5px;
 }
 
 .date-and-time {
@@ -48,132 +88,77 @@ nav {
   padding-top: 30px;
 }
 
-.date {
+#current-date {
   float: right;
   padding-right: 30px;
   font-size: 18px;
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  margin: 5% auto;
-  align-items: center;
-  justify-content: center;
-  background-color: #fff;
-}
-
-.header {
-  text-align: center;
-  padding-top: 20px;
-  font-size: 24px;
-  padding-bottom: 20px;
-}
-
-#bookshelf {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.unorderedList {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px;
-  border: 1px solid gray;
-  gap: 30px;
-}
-
-.unorderedList li {
-  list-style: none;
-}
-
-#bookshelf .unorderedList:nth-child(odd) {
-  background-color: rgb(235, 231, 231);
-}
-
-#bookshelf .unorderedList:nth-child(even) {
-  background-color: #fff;
-}
-
-.delete {
+.element button {
+  background: #f53030;
+  color: #fff;
+  padding: 5px;
   border: none;
-  border-radius: 4px;
-  padding: 5px;
-  background-color: #fff;
-  color: #000;
-  box-shadow: 0 1px 1px 3px #000;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-span {
-  display: flex;
-  text-align: justify;
-  gap: 5px;
-}
-
-.line {
-  width: 10%;
-  border: 1px solid rgb(80, 79, 79);
-  margin-top: 40px;
-  border-radius: 1px 8px 1px 4px;
-  margin-bottom: 10px;
-}
-
-#form {
+form {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  width: 40%;
+  align-items: center;
+  margin: 15px auto;
+  position: relative;
+}
+
+form input {
   width: 100%;
-  flex: 1;
-  gap: 10px;
-}
-
-#title {
-  width: 20em;
+  height: 40px;
+  margin-bottom: 15px;
   padding: 10px;
+  font-size: 16px;
 }
 
-#author {
-  width: 20em;
-  padding: 10px;
+form span {
+  color: red;
+  margin-bottom: 5px;
 }
 
-#addBtn {
-  border: 1px solid #000;
-  border-radius: 4px;
-  padding: 5px;
-  background-color: #fff;
-  color: #000;
-  box-shadow: 0 2px 2px 1px #000;
+.contact {
+  width: 60%;
+  margin: auto;
 }
 
-.contact-header {
-  text-align: center;
-  padding-top: 30px;
+.contact p {
   font-size: 24px;
+  margin-bottom: 5px;
 }
 
-.contact-details {
-  padding-top: 15px;
-  font-size: 18px;
+.contact ul {
+  margin-top: 30px;
+  margin-left: 50px;
+}
+
+.contact ul li {
+  font-size: 22px;
+  margin-bottom: 5px;
 }
 
 footer {
-  background-color: #fff;
-  text-align: center;
-  position: fixed;
-  border: 1px solid #000;
+  display: flex;
   width: 100%;
+  margin: auto;
+  height: auto;
+  position: absolute;
   bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 24px;
+  padding: 24px 0;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background: #fff;
 }
 
-footer i {
-  padding-left: 50px;
-  color: #000;
-  font-weight: bold;
+.copy-right {
+  margin-right: 40px;
 }

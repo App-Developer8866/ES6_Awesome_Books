@@ -10,13 +10,13 @@ class BookCollection {
     this.currentDate = new Date();
   }
 
-  updateBookData(collectionData) {
+  updateBookData = (collectionData) => {
     localStorage.setItem('booksCollection', JSON.stringify(collectionData));
     this.title.value = '';
     this.author.value = '';
   }
 
-  showBookData() {
+  showBookData = () => {
     Object.values(this.collection).forEach((field) => {
       const html = `<div class="detailDiv"><p class="title" data-title="${field.title}" data-author="${field.author}">"${field.title}" by ${field.author}</p>
           <button class="remove">Remove</button></div>
@@ -36,7 +36,7 @@ class BookCollection {
     }
   }
 
-  removeBook(event) {
+  removeBook = (event) => {
     const parentDiv = event.target.parentElement;
     const titleSelector = parentDiv.querySelector('.title');
     const title = titleSelector.getAttribute('data-title');
@@ -55,7 +55,7 @@ class BookCollection {
     this.updateBookData(collectionFilter);
   }
 
-  addBook(title, author) {
+  addBook = (title, author) => {
     this.collection.push({ title, author });
     const html = `<div class="detailDiv"><p class="title" data-title="${title}" data-author="${author}">"${title}" by ${author}</p>
         <button class="remove">Remove</button></div>
@@ -70,7 +70,7 @@ class BookCollection {
     });
   }
 
-  navigateSection(key, item) {
+  navigateSection = (key, item) => {
     const activeItems = document.querySelectorAll('li.nav-items a.active');
 
     this.mainDivs.forEach((div) => {
